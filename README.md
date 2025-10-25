@@ -36,7 +36,7 @@ Follow these steps to get a local copy up and running:
 
 1. Clone the repository
 
-git clone [https://github.com/yourusername/django-todo-app.git](https://github.com/yourusername/django-todo-app.git)
+git clone [https://github.com/yourusername/django-todo-app.git](https://github.com/Xenawi/django_app.git)
 cd django-todo-app
 
 
