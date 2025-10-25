@@ -106,7 +106,7 @@ Backend:  Django (Python Web Framework)
 
 Database: SQLite (Default for development)
 
-Frontend: HTML5, CSS3, Vanilla JavaScript (or Tailwind CSS/Bootstrap if used)
+Frontend: HTML5, CSS3, Bootstrap5
 
 📄 License
 
