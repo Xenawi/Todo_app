@@ -1,0 +1,47 @@
+{% extends "myapp/layouts.html" %}
+
+{% block title %}TODO-List | TODO APP{% endblock %}
+
+{% block contents %}
+
+<div class="card mt-5 p-5">
+    
+    <h2 class="text-center">
+        Todo List
+    </h2>
+    <hr>
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for todo in todos %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.contents }}</td>
+                <td>
+                    <a href="{% url 'update_todo' todo.todo_id %}" class="btn btn-warning">Update</a>
+                    <a href="{% url 'delete_todo' todo.todo_id %}" class="btn btn-danger">Delete</a>
+                    <a href="{% url 'toggle_done' todo.todo_id %}" class="btn btn-success {% if todo.completed %}btn-dark{% else %}btn-success{% endif %}">
+                        {% if todo.completed %}Undo{% else %}Done{% endif %}
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'add_todo' %}" class="btn btn-info">ADD</a>
+
+</div>
+
+
+
+{% endblock %}

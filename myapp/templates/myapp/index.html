@@ -1,0 +1,22 @@
+{% extends "myapp/layouts.html" %}
+
+{% block title %}Home | TODO APP{% endblock %}
+
+{% block contents %}
+
+<div class="card mt-5 p-5">
+    
+    <h2 class="text-center">
+        Welcome To Your daily Todo list, <strong>{{user.username}}</strong>
+    </h2>
+    
+    <div class="text-center">
+        <a href="{% url 'add_todo' %}" class="btn btn-info mt-5 btn-lg">Create your first todo</a>
+        <a href="{% url 'todo_list' %}" class="btn btn-info mt-5 btn-lg">View your todo lists</a>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
